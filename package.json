@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc --project .",
-    "lint": "eslint --fix .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
     "test": "jest"
   },
   "repository": {
