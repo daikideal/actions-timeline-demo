@@ -10,10 +10,8 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: Kesin11/actions-timeline@v2
-        # with:
-          # e.g.: ${{ secrets.MY_PAT }}
-          # Default: ${{ github.token }}
-          # github-token: ""
+        with:
+          github-token: ${{ github.token }}
       - uses: actions/checkout@v4
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -27,10 +25,8 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: Kesin11/actions-timeline@v2
-        # with:
-          # e.g.: ${{ secrets.MY_PAT }}
-          # Default: ${{ github.token }}
-          # github-token: ""
+        with:
+          github-token: ${{ github.token }}
       - uses: actions/checkout@v4
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -44,10 +40,8 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: Kesin11/actions-timeline@v2
-        # with:
-          # e.g.: ${{ secrets.MY_PAT }}
-          # Default: ${{ github.token }}
-          # github-token: ""
+        with:
+          github-token: ${{ github.token }}
       - uses: actions/checkout@v4
       - name: Set up Node.js
         uses: actions/setup-node@v4
