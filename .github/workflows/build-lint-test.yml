@@ -11,9 +11,6 @@ jobs:
     permissions:
       actions: read
     steps:
-      - uses: Kesin11/actions-timeline@v2
-        with:
-          github-token: ${{ github.token }}
       - uses: actions/checkout@v4
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -28,9 +25,6 @@ jobs:
     permissions:
       actions: read
     steps:
-      - uses: Kesin11/actions-timeline@v2
-        with:
-          github-token: ${{ github.token }}
       - uses: actions/checkout@v4
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -45,9 +39,6 @@ jobs:
     permissions:
       actions: read
     steps:
-      - uses: Kesin11/actions-timeline@v2
-        with:
-          github-token: ${{ github.token }}
       - uses: actions/checkout@v4
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -57,3 +48,8 @@ jobs:
         run: npm install
       - name: Test
         run: npm run test
+  actions-timeline:
+    needs: [build, lint, test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Kesin11/actions-timeline@v2
