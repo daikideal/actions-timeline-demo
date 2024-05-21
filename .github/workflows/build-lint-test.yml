@@ -8,8 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
-    permissions:
-      actions: read
     steps:
       - uses: actions/checkout@v4
       - name: Set up Node.js
@@ -22,8 +20,6 @@ jobs:
         run: npm run build
   lint:
     runs-on: ubuntu-22.04
-    permissions:
-      actions: read
     steps:
       - uses: actions/checkout@v4
       - name: Set up Node.js
@@ -36,8 +32,6 @@ jobs:
         run: npm run lint
   test:
     runs-on: ubuntu-22.04
-    permissions:
-      actions: read
     steps:
       - uses: actions/checkout@v4
       - name: Set up Node.js
